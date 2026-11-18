@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>10 промптов для света</title>
+<meta name="description" content="Снимаешь один раз дома, а нейросеть меняет свет: закат, неон, студия, кино. 10 готовых промптов для Seedance в Higgsfield.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#FFFEFD;--leaf:#F7E8E9;--leaf-l:#FBF1F1;--ink:#141010;--ink2:#2B2224;--stone:#F7F5F4;--char:#4A4243;--mute:#857B7C;--line:rgba(20,16,16,.12);--card:#fff;--acc:#8E1420;--acc-2:#6E0F18;--on:#fff;--y:#F5C518;
+--f-h:"Montserrat","Helvetica Neue",Arial,sans-serif;--f-b:"Inter","Helvetica Neue",Arial,sans-serif;--r:24px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121010;--leaf:#2A1719;--leaf-l:#1E1314;--ink:#F4EDED;--ink2:#fff;--stone:#1A1515;--char:#D2C9CA;--mute:#9A8F90;--line:rgba(244,237,237,.14);--card:#191414;--acc:#D23A48;--acc-2:#E3170A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121010;--leaf:#2A1719;--leaf-l:#1E1314;--ink:#F4EDED;--ink2:#fff;--stone:#1A1515;--char:#D2C9CA;--mute:#9A8F90;--line:rgba(244,237,237,.14);--card:#191414;--acc:#D23A48;--acc-2:#E3170A;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--char);font:400 16px/1.6 var(--f-b);-webkit-font-smoothing:antialiased;padding:0 max(16px,env(safe-area-inset-left)) 48px}
+.wrap{max-width:720px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-h);color:var(--ink);letter-spacing:-.03em;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,9vw,58px);line-height:1.05;margin-top:14px}
+h2{font-size:clamp(24px,6vw,34px);line-height:1.15}
+h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+p{margin:0}.muted{color:var(--mute);font-size:14px}
+.g{background:var(--acc);color:var(--on);border-radius:10px;padding:0 .16em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.badge{display:inline-flex;gap:6px;align-items:center;font:500 12px/1 var(--f-b);color:var(--ink);background:var(--stone);border:1px solid var(--line);border-radius:99px;padding:7px 12px;margin-top:28px}
+.lede{font-size:clamp(16px,4.2vw,19px);margin-top:14px;max-width:36ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1.2 var(--f-b);color:var(--on);background:var(--acc);border-radius:99px;padding:16px 24px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .15s}
+.btn:hover{background:var(--acc-2)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);padding:12px 18px;font-size:14px}
+.btn.ghost:hover{background:var(--stone)}
+.aff{margin-top:24px;background:var(--ink);color:#fff;border-radius:var(--r);padding:24px clamp(18px,4vw,28px);display:grid;gap:14px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aff{background:#2A1719}}
+.aff h2{color:#fff;font-size:clamp(22px,5.6vw,30px)}
+.aff p{color:rgba(255,255,255,.82)}
+.aff .btn{width:100%;font-size:17px;padding:18px 24px;background:var(--y);color:#141010}
+.aff .btn:hover{background:#ffd84a}
+.aff small{color:rgba(255,255,255,.6);font-size:13px}
+.zero{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--y);color:#141010;font:800 16px/1 var(--f-h)}
+section{margin-top:36px}
+.steps{display:grid;gap:14px;margin-top:16px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px clamp(16px,4vw,26px);display:flex;gap:14px}
+.num{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--acc);color:var(--on);font:700 16px/1 var(--f-h)}
+.step p{margin-top:4px}
+.note{background:var(--leaf-l);border-left:3px solid var(--acc);border-radius:6px 16px 16px 6px;padding:12px 14px;font-size:14px;color:var(--ink);margin-top:12px}
+.lights{display:grid;gap:14px;margin-top:16px}
+.light{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:92px 1fr}
+.sw{min-height:100%}
+.lt{padding:16px 18px;display:grid;gap:10px;min-width:0}
+.lh{display:flex;gap:10px;align-items:flex-start}
+.ln{font:800 13px/1 var(--f-h);color:var(--acc);background:var(--leaf);border-radius:99px;padding:6px 9px;flex:none}
+details summary{cursor:pointer;font-size:14px;color:var(--acc);font-weight:600}
+pre{white-space:pre-wrap;word-break:break-word;background:var(--stone);border:1px solid var(--line);border-radius:14px;padding:12px;font:13px/1.5 ui-monospace,Menlo,monospace;color:var(--ink);margin:8px 0 0}
+.copy{justify-self:start}
+.copy.ok{background:var(--leaf);color:var(--acc)}
+.author{margin-top:40px;display:flex;gap:14px;align-items:center;background:var(--stone);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.author b{color:var(--ink);font-family:var(--f-h)}
+.author a{color:var(--acc)}
+.bottom{margin-top:28px}
+.bottom .btn{width:100%}
+</style></head><body><main class="wrap">
+<span class="badge">💡 Туториал · Seedance 2.5 в Higgsfield</span>
+<h1>Один дубль дома, <span class="g">10 видов света</span></h1>
+<p class="lede">Снимаешь себя один раз на телефон, а нейросеть меняет свет: закат, неон, студия, кино. Ниже 10 готовых промптов.</p>
+
+<div class="aff" id="start">
+  <div style="display:flex;gap:12px;align-items:center"><span class="zero">0</span><h2>Сначала зарегистрируйся в Higgsfield</h2></div>
+  <p>Все промпты работают в Higgsfield, модель Seedance 2.5. Зарегистрируйся по этой ссылке, а потом возвращайся сюда и иди по шагам.</p>
+  <a class="btn" href="https://higgsfield.ai?fpr=yuliia-b96b85" target="_blank" rel="noopener">Зарегистрироваться в Higgsfield →</a>
+  <small>Ссылка откроется в новой вкладке, эта страница останется открытой.</small>
+</div>
+
+<section><h2>Как сделать</h2>
+<div class="steps">
+<div class="step"><span class="num">1</span><div><h3>Сними один дубль</h3><p>Телефон вертикально на штативе, 1,5–2 метра от тебя. В кадре от середины бедра до макушки. Свет ровный спереди, окно не за спиной. Между фразами пауза 1–2 секунды.</p><p class="note">Снимай широко. Если кадр тесный, нейросеть «замораживает» движения.</p></div></div>
+<div class="step"><span class="num">2</span><div><h3>Подготовь фото лица и клипы</h3><p>Сделай фото лица анфас и в профиль и поставь их рядом в одну картинку. Разрежь видео на куски примерно по 5 секунд, по одной фразе.</p><p class="note">Один клип = один свет. Режь точно в начале фразы, тогда свет переключается ровно на склейке.</p></div></div>
+<div class="step"><span class="num">3</span><div><h3>Загрузи в Higgsfield</h3><p>Create Video → модель <b>Seedance 2.5</b> → формат 9:16. Сначала загрузи клип, потом фото лица.</p></div></div>
+<div class="step"><span class="num">4</span><div><h3>Вставь промпт и нажми Generate</h3><p>Выбери свет ниже и скопируй промпт целиком. Он на английском, так нейросеть понимает точнее.</p><p class="note">Описывай только свет. Если описать движения, нейросеть начнёт их «играть».</p></div></div>
+<div class="step"><span class="num">5</span><div><h3>Смонтируй</h3><p>Ставь клипы подряд, каждый свет на свою фразу. Клипы сохраняют длину, поэтому совпадают с голосом.</p></div></div>
+</div></section>
+
+<section><h2>10 промптов для света</h2>
+<div class="lights">
+<article class="light"><div class="sw" style="background:linear-gradient(135deg,#3a1a08,#d9761e 55%,#ffc46b)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">01</span><div><h3>Закат</h3><p class="muted">Тёплый, уютный: для личных историй</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Warm golden-hour sun comes in low through a window on the left, long orange rays across them and the wall, soft warm glow on the skin, gentle warm shadows.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Warm golden-hour sun comes in low through a window on the left, long orange rays across them and the wall, soft warm glow on the skin, gentle warm shadows.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:linear-gradient(90deg,#ff2d95,#1a0b2e 50%,#1f6bff)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">02</span><div><h3>Неон</h3><p class="muted">Яркий, как в клипах: для трендов</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+The room is dark. Pink neon light from the left and electric blue neon from the right, colored rim light on hair and shoulders, glossy music-video look.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+The room is dark. Pink neon light from the left and electric blue neon from the right, colored rim light on hair and shoulders, glossy music-video look.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:radial-gradient(circle at 50% 35%,#ffffff,#e9e4e0 60%,#cfc8c3)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">03</span><div><h3>Студия для рекламы</h3><p class="muted">Чистый и светлый: для продаж</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Bright soft studio light from a large softbox in front, even flattering light on the face, clean bright background, polished commercial look.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Bright soft studio light from a large softbox in front, even flattering light on the face, clean bright background, polished commercial look.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:repeating-linear-gradient(160deg,#f2c27a 0 14px,#2a1a10 14px 30px)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">04</span><div><h3>Жалюзи, как в кино</h3><p class="muted">Атмосферный: для сторителлинга</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Hard afternoon sunlight falls through venetian blinds, sharp striped shadows across their face, body and the wall, film-noir mood.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Hard afternoon sunlight falls through venetian blinds, sharp striped shadows across their face, body and the wall, film-noir mood.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:linear-gradient(90deg,#d9b9a0,#3b2a24 45%,#0d0a09)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">05</span><div><h3>Драматичный</h3><p class="muted">Контрастный: для экспертных заявлений</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Single soft key light from 45 degrees on one side, the other side falls into deep shadow, dark background, moody cinematic contrast.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Single soft key light from 45 degrees on one side, the other side falls into deep shadow, dark background, moody cinematic contrast.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:radial-gradient(circle at 20% 30%,#ffd27a 0 6px,transparent 7px),radial-gradient(circle at 70% 60%,#ffb347 0 8px,transparent 9px),radial-gradient(circle at 45% 80%,#ffe39a 0 5px,transparent 6px),linear-gradient(135deg,#2a1608,#5a3412)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">06</span><div><h3>Новогодняя гирлянда</h3><p class="muted">Праздничный: для акций к праздникам</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Evening room lit by warm fairy lights and a Christmas garland behind them, soft golden bokeh in the background, cozy warm light on the face.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Evening room lit by warm fairy lights and a Christmas garland behind them, soft golden bokeh in the background, cozy warm light on the face.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:linear-gradient(225deg,#c9d8ff,#2b3d66 45%,#0b1020)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">07</span><div><h3>Лунный свет</h3><p class="muted">Спокойный: для вечерних историй</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Night. Cool blue moonlight comes through a window on the right, soft silver light on the face, the rest of the room in calm blue darkness.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Night. Cool blue moonlight comes through a window on the right, soft silver light on the face, the rest of the room in calm blue darkness.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:linear-gradient(90deg,#f08a3c,#3a3a3a 50%,#13807a)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">08</span><div><h3>Кино «тил и оранж»</h3><p class="muted">Как в блокбастере: для вау-эффекта</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Cinematic teal-and-orange grade: warm orange key light on the face, cool teal light filling the shadows and the background.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+Cinematic teal-and-orange grade: warm orange key light on the face, cool teal light filling the shadows and the background.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:radial-gradient(ellipse at 50% 0%,#fff6e0 0,#8a7a60 30%,#0c0a08 70%)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">09</span><div><h3>Прожектор на сцене</h3><p class="muted">Как на выступлении: для анонсов</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+A single hard spotlight from above and slightly in front, light haze in the air, the room around them falls into darkness, stage-show look.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+A single hard spotlight from above and slightly in front, light haze in the air, the room around them falls into darkness, stage-show look.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+<article class="light"><div class="sw" style="background:linear-gradient(90deg,#f2f2f2,#7a7a7a 45%,#0a0a0a)" aria-hidden="true"></div><div class="lt"><div class="lh"><span class="ln">10</span><div><h3>Чёрно-белое кино</h3><p class="muted">Стильный: для имиджевых роликов</p></div></div><details><summary>Показать промпт</summary><pre>Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+High-contrast black-and-white film look, hard side light, deep blacks, soft film grain, classic portrait mood.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.</pre></details><button class="btn ghost copy" data-p="Keep everything in the video the same. Only the lighting changes. Same person, same outfit, same room, same framing. Every movement comes from the video 100%, frame for frame: face, head, hands, gestures and lip sync. Use the face photo only for their face and likeness, never for poses.
+
+LIGHT
+High-contrast black-and-white film look, hard side light, deep blacks, soft film grain, classic portrait mood.
+
+LOCKS
+Same framing as the video. Their face matches the face photo. The new light stays for the whole clip. The original voice continues for the full clip. No music. No subtitles. No on-screen text.">Скопировать промпт</button></div></article>
+</div></section>
+
+<section class="bottom"><a class="btn" href="https://higgsfield.ai?fpr=yuliia-b96b85" target="_blank" rel="noopener">Попробовать в Higgsfield →</a></section>
+
+<div class="author"><div><b>Юлия Безуглая</b><p class="muted">Показываю предпринимателям и блогерам, как делать контент с нейросетями. <a href="https://www.instagram.com/rosinka.fm" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/rosinkafm_official" target="_blank" rel="noopener">Telegram</a></p></div></div>
+</main>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{
+ const t=b.dataset.p;let ok=false;
+ try{await navigator.clipboard.writeText(t);ok=true}catch(e){
+  const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{ok=document.execCommand('copy')}catch(_){}a.remove()}
+ b.textContent=ok?'Скопировано ✓':'Выдели текст в «Показать промпт»';b.classList.add('ok');setTimeout(()=>{b.textContent='Скопировать промпт';b.classList.remove('ok')},2200)}));
+</script>
+</body></html>
